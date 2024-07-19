@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Instagram Feed</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <nav class="navbar bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand">
+            <i class="fa-brands fa-instagram"></i>
+            Instagram
+          </a>
+          <div class="d-flex gap-2">
+            <div>
+              <!-- Button trigger modal -->
+              <button
+                type="button"
+                class="btn btn-success"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Create a new post
+              </button>
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">
+                        Create a new post
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="mb-3">
+                          <label for="message-text" class="col-form-label"
+                            >Caption:</label
+                          >
+                          <textarea
+                            class="form-control"
+                            id="message-text"
+                            placeholder="Add the caption of your post here"
+                          ></textarea>
+                        </div>
+                      </form>
+                      <button
+                        type="button"
+                        class="bg-light border border-1 px-2 rounded"
+                      >
+                        <i class="fa-solid fa-camera"></i>
+                      </button>
+                      <button
+                        type="button"
+                        class="bg-light border border-1 px-2 rounded"
+                      >
+                        <i class="fa-solid fa-location-dot"></i>
+                      </button>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="button" class="btn btn-success">
+                        Publish
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="btn-group">
+              <button
+                type="button"
+                class="btn btn-secondary dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa-solid fa-gear"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Privacy and Data</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item text-danger" href="#">Log out</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid d-flex justify-content-center p-4">
+        <button id="btn-grid" class="btn pointer" data-view="grid">
+          <i class="fa-solid fa-table-cells" style="color: #7d7b7b"></i>
+        </button>
+        <button id="btn-list" class="btn pointer" data-view="list">
+          <i class="fa-solid fa-square" style="color: #7d7b7b"></i>
+        </button>
+      </div>
+
+      <div id="post" class="post-list pb-3">
+        <div>
+          <div
+            class="heading d-flex justify-content-between border border-2 p-2"
+          >
+            <h3 class="fs-5 mt-2">My Crazy dog Spark!</h3>
+            <small class="text-secondary">08/26</small>
+          </div>
+          <div class="image">
+            <img src="./img/dog.jpg" class="img-fluid mx-100" alt="" />
+          </div>
+          <div class="content border border-2 p-2">
+            <span class="fw-bold">204 Likes</span>
+            <br />
+            <small class="d-block pb-2">
+              This is an example of a very good photo that you can post on
+              instagram
+            </small>
+          </div>
+        </div>
+
+        <div>
+          <div
+            class="heading d-flex justify-content-between border border-2 p-2"
+          >
+            <h3 class="fs-5 mt-2">The greatness of Croacia</h3>
+            <small class="text-secondary">04/09</small>
+          </div>
+          <div class="image">
+            <img src="./img/croacia.jpg" class="img-fluid mx-100" alt="" />
+          </div>
+          <div class="content border border-2 p-2">
+            <span class="fw-bold">26985 Likes</span>
+            <br />
+            <small class="d-block pb-2">
+              This is an example of a very good photo that you can post on
+              instagram
+            </small>
+          </div>
+        </div>
+
+        <div>
+          <div
+            class="heading d-flex justify-content-between border border-2 p-2"
+          >
+            <h3 class="fs-5 mt-2">Beautiful sunset at a voleyball match</h3>
+            <small class="text-secondary">06/10</small>
+          </div>
+          <div class="image">
+            <img src="./img/voleyball.jpg" class="img-fluid mx-100" alt="" />
+          </div>
+          <div class="content border border-2">
+            <span class="fw-bold">501 Likes</span>
+            <br />
+            <small class="d-block pb-2">
+              This is an example of a very good photo that you can post on
+              instagram
+            </small>
+          </div>
+        </div>
+
+        <div>
+          <div
+            class="heading d-flex justify-content-between border border-2 p-2"
+          >
+            <h3 class="fs-5 mt-2">Delicious peruvian food</h3>
+            <small class="text-secondary">01/31</small>
+          </div>
+          <div class="image">
+            <img src="./img/food.jpg" class="img-fluid mx-100" alt="" />
+          </div>
+          <div class="content border border-2">
+            <span class="fw-bold">789 Likes</span>
+            <br />
+            <small class="d-block pb-2">
+              This is an example of a very good photo that you can post on
+              instagram
+            </small>
+          </div>
+        </div>
+
+        <div>
+          <div
+            class="heading d-flex justify-content-between border border-2 p-2"
+          >
+            <h3 class="fs-5 mt-2">Paris bridge at night</h3>
+            <small class="text-secondary">05/22</small>
+          </div>
+          <div class="image">
+            <img src="./img/paris.jpg" class="img-fluid mx-100" alt="" />
+          </div>
+          <div class="content border border-2">
+            <span class="fw-bold">1004 Likes</span>
+            <br />
+            <small class="d-block pb-2">
+              This is an example of a very good photo that you can post on
+              instagram
+            </small>
+          </div>
+        </div>
+
+        <div>
+          <div
+            class="heading d-flex justify-content-between border border-2 p-2"
+          >
+            <h3 class="fs-5 mt-2">Children smiling with a llama!</h3>
+            <small class="text-secondary">08/25</small>
+          </div>
+          <div class="image">
+            <img src="./img/happiness.jpg" class="img-fluid mx-100" alt="" />
+          </div>
+          <div class="content border border-2 pb-2">
+            <span class="fw-bold">390 Likes</span>
+            <br />
+            <small class="d-block pb-2">
+              This is an example of a very good photo that you can post on
+              instagram
+            </small>
+          </div>
+        </div>
+
+        <div>
+          <div
+            class="heading d-flex justify-content-between border border-2 p-2"
+          >
+            <h3 class="fs-5 mt-2">True love</h3>
+            <small class="text-secondary">04/14</small>
+          </div>
+          <div class="image">
+            <img src="./img/love.jpg" class="img-fluid mx-100" alt="" />
+          </div>
+          <div class="content border border-2 pb-2">
+            <span class="fw-bold">5203 Likes</span>
+            <br />
+            <small class="d-block pb-2">
+              This is an example of a very good photo that you can post on
+              instagram
+            </small>
+          </div>
+        </div>
+
+        <div>
+          <div
+            class="heading d-flex justify-content-between border border-2 p-2"
+          >
+            <h3 class="fs-5 mt-2">Majestic Machu Picchu!</h3>
+            <small class="text-secondary">09/16</small>
+          </div>
+          <div class="image">
+            <img src="./img/landscape.jpg" class="img-fluid mx-100" alt="" />
+          </div>
+          <div class="content border border-2 pb-2">
+            <span class="fw-bold">13780 Likes</span>
+            <br />
+            <small class="d-block pb-2">
+              This is an example of a very good photo that you can post on
+              instagram
+            </small>
+          </div>
+        </div>
+
+        <div>
+          <div
+            class="heading d-flex justify-content-between border border-2 p-2"
+          >
+            <h3 class="fs-5 mt-2">Finished project!</h3>
+            <small class="text-secondary">07/15</small>
+          </div>
+          <div class="image">
+            <img src="./img/business.jpg" class="img-fluid mx-100" alt="" />
+          </div>
+          <div class="content border border-2 pb-2">
+            <span class="fw-bold">80 Likes</span>
+            <br />
+            <small class="d-block pb-2">
+              This is an example of a very good photo that you can post on
+              instagram
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

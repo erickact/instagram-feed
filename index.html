@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <title>Instagram Feed</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-light bg-light py-3">
+            <div class="container-fluid">
+                <div class="navbar-brand">
+                    <i class="fa-brands fa-instagram fa-xl"></i>
+                    <h5 class="d-inline-block fs-5">Instagram</h5>
+                </div>
+                <div class="d-flex gap-2">
+                    <!-- Modal -->
+                    <div>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Create a new post</button>
+
+                        <!-- Modal body -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="message-text" class="col-form-label">Caption:</label>
+                                                <textarea class="form-control" id="message-text" placeholder="Add the caption of your post here"></textarea>
+                                            </div>
+                                        </form>
+                                        <button type="button" class="col-1 btn-light border p-1 rounded">
+                                            <i class="fa-solid fa-camera"></i>
+                                        </button>
+                                        <button type="button" class="col-1 btn-light border p-1 rounded">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                        </button>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-success">Publish</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dropdown -->
+
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-gear"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                            <li>
+                                <a class="dropdown-item" href="#">Profile</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Accesibility</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Privacy and Data</a>
+                            </li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li>
+                                <a class="dropdown-item text-danger" href="#">Log out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Posts -->
+        <div class="container-fluid p-2">
+            <!-- Display buttons -->
+            <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">
+                        <i class="fa-solid fa-table-cells" style="color: #7d7b7b"></i>
+                    </a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
+                        <i class="fa-solid fa-square" style="color: #7d7b7b"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Displays -->
+            <div class="tab-content">
+                <!-- 3 photos per row -->
+                <div class="tab-pane active fade show" id="home" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                    <div class="row row-cols-3">
+                        <div class="col-4 p-1"><img class="img-fluid object-fit-cover w-100 h-100" src="./img/dog.jpg" alt="" /></div>
+                        <div class="col-4 p-1"><img class="img-fluid object-fit-cover w-100 h-100" src="./img/croacia.jpg" alt="" /></div>
+                        <div class="col-4 p-1"><img class="img-fluid object-fit-cover w-100 h-100" src="./img/voleyball.jpg" alt="" /></div>
+                        <div class="col-4 p-1"><img class="img-fluid object-fit-cover w-100 h-100" src="./img/food.jpg" alt="" /></div>
+                        <div class="col-4 p-1"><img class="img-fluid object-fit-cover w-100 h-100" src="./img/paris.jpg" alt="" /></div>
+                        <div class="col-4 p-1"><img class="img-fluid object-fit-cover w-100 h-100" src="./img/happiness.jpg" alt="" /></div>
+                        <div class="col-4 p-1"><img class="img-fluid object-fit-cover w-100 h-100" src="./img/love.jpg" alt="" /></div>
+                        <div class="col-4 p-1"><img class="img-fluid object-fit-cover w-100 h-100" src="./img/landscape.jpg" alt="" /></div>
+                        <div class="col-4 p-1"><img class="img-fluid object-fit-cover w-100 h-100" src="./img/business.jpg" alt="" /></div>
+                    </div>
+                </div>
+                <!-- 1 photo per row -->
+                <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                    <div class="row my-4">
+                        <div class="col-6 mx-auto border rounded p-0">
+                            <div class="d-flex justify-content-between p-2">
+                                <h3 class="fs-4 m-0">My Crazy dog Spark!</h3>
+                                <small class="text-secondary align-bottom">08/26</small>
+                            </div>
+                            <img src="./img/dog.jpg" class="img-fluid object-fit-cover col-12 w-100" alt="" />
+                            <div class="p-2">
+                                <strong>204 Likes</strong>
+                                <p>This is an example of a very good photo that you can post on instagram</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6 mx-auto border rounded p-0">
+                            <div class="d-flex justify-content-between p-2">
+                                <h3 class="fs-4 m-0">The greatness of Croacia</h3>
+                                <small class="text-secondary align-bottom">04/09</small>
+                            </div>
+                            <img src="./img/croacia.jpg" class="img-fluid object-fit-cover col-12 w-100" alt="" />
+                            <div class="p-2">
+                                <strong>26985 Likes</strong>
+                                <p>This is an example of a very good photo that you can post on instagram</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6 mx-auto border rounded p-0">
+                            <div class="d-flex justify-content-between p-2">
+                                <h3 class="fs-4 m-0">Beautiful sunset at a voleyball match</h3>
+                                <small class="text-secondary align-bottom">06/10</small>
+                            </div>
+                            <img src="./img/voleyball.jpg" class="img-fluid object-fit-cover col-12 w-100" alt="" />
+                            <div class="p-2">
+                                <strong>501 Likes</strong>
+                                <p>This is an example of a very good photo that you can post on instagram</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6 mx-auto border rounded p-0">
+                            <div class="d-flex justify-content-between p-2">
+                                <h3 class="fs-4 m-0">Delicious peruvian food</h3>
+                                <small class="text-secondary align-bottom">01/31</small>
+                            </div>
+                            <img src="./img/food.jpg" class="img-fluid object-fit-cover col-12 w-100" alt="" />
+                            <div class="p-2">
+                                <strong>789 Likes</strong>
+                                <p>This is an example of a very good photo that you can post on instagram</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6 mx-auto border rounded p-0">
+                            <div class="d-flex justify-content-between p-2">
+                                <h3 class="fs-4 m-0">Paris bridge at night</h3>
+                                <small class="text-secondary align-bottom">05/22</small>
+                            </div>
+                            <img src="./img/paris.jpg" class="img-fluid object-fit-cover col-12 w-100" alt="" />
+                            <div class="p-2">
+                                <strong>1004 Likes</strong>
+                                <p>This is an example of a very good photo that you can post on instagram</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6 mx-auto border rounded p-0">
+                            <div class="d-flex justify-content-between p-2">
+                                <h3 class="fs-4 m-0">Children smiling with a llama!</h3>
+                                <small class="text-secondary align-bottom">08/25</small>
+                            </div>
+                            <img src="./img/happiness.jpg" class="img-fluid object-fit-cover col-12 w-100" alt="" />
+                            <div class="p-2">
+                                <strong>390 Likes</strong>
+                                <p>This is an example of a very good photo that you can post on instagram</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6 mx-auto border rounded p-0">
+                            <div class="d-flex justify-content-between p-2">
+                                <h3 class="fs-4 m-0">True love</h3>
+                                <small class="text-secondary align-bottom">04/14</small>
+                            </div>
+                            <img src="./img/love.jpg" class="img-fluid object-fit-cover col-12 w-100" alt="" />
+                            <div class="p-2">
+                                <strong>5203 Likes</strong>
+                                <p>This is an example of a very good photo that you can post on instagram</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6 mx-auto border rounded p-0">
+                            <div class="d-flex justify-content-between p-2">
+                                <h3 class="fs-4 m-0">Majestic Machu Picchu!</h3>
+                                <small class="text-secondary align-bottom">09/16</small>
+                            </div>
+                            <img src="./img/landscape.jpg" class="img-fluid object-fit-cover col-12 w-100" alt="" />
+                            <div class="p-2">
+                                <strong>13780 Likes</strong>
+                                <p>This is an example of a very good photo that you can post on instagram</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6 mx-auto border rounded p-0">
+                            <div class="d-flex justify-content-between p-2">
+                                <h3 class="fs-4 m-0">Finished project!</h3>
+                                <small class="text-secondary align-bottom">09/27</small>
+                            </div>
+                            <img src="./img/happiness.jpg" class="img-fluid object-fit-cover col-12 w-100" alt="" />
+                            <div class="p-2">
+                                <strong>80 Likes</strong>
+                                <p>This is an example of a very good photo that you can post on instagram</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"
+        ></script>
+        <script src="./index.js"></script>
+    </body>
+</html>
